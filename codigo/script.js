@@ -37,6 +37,8 @@ inputBtn.addEventListener('input', ()=>{
     })
 
     if(correct) {
+        // mostrar calculo wpm e verificar se foi bom
+        // adicionar botao para reiniciar
         containerEl.textContent = ''
     }
     
