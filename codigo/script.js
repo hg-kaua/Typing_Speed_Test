@@ -37,9 +37,11 @@ inputBtn.addEventListener('input', ()=>{
     })
 
     if(correct) {
-        // mostrar calculo wpm e verificar se foi bom
         // adicionar botao para reiniciar
-        containerEl.textContent = ''
+        inputBtn.style.opacity = 0;
+        document.querySelector('h2').style.opacity = 0;
+        quoteDisplayEl.textContent = 'Wanna play again?';
+        createButton();
     }
     
 });
@@ -59,6 +61,22 @@ function RenderNewStory() {
     });
     
 
+}
+
+function createButton() {
+    const button = document.createElement('button');
+    button.classList.add('button');
+    button.textContent = 'Play again';
+    containerEl.appendChild(button);
+
+    button.addEventListener('click', () => {
+        RenderNewStory();
+        button.remove();
+        document.querySelector('h2').style.opacity = 100;
+        inputBtn.style.opacity = 100;
+
+    });
+    
 }
 RenderNewStory();
 

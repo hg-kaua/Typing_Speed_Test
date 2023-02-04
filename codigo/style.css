@@ -46,3 +46,16 @@ input:focus {
     color: #B22222;
     text-decoration: underline;
 }
+.button {
+    margin: 50px 225px;
+    width: 150px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid black;
+    box-shadow: -5px 5px 0px;
+    cursor: pointer;
+    transition: transform 1s;
+}
+.button:hover {
+    transform: scale(1.3);
+}
